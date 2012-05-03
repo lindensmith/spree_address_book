@@ -13,6 +13,7 @@ Spork.prefork do
   # gems
   require 'ffaker'
   require 'capybara/rspec'
+  require 'capybara/webkit'
   require 'database_cleaner'
 
   # Requires for spree_core
