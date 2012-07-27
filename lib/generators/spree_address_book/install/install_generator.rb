@@ -4,12 +4,14 @@ module SpreeAddressBook
 
       def add_javascripts
         append_file 'app/assets/javascripts/store/all.js', "//= require store/spree_address_book\n"
-        append_file 'app/assets/javascripts/admin/all.js', "//= require admin/spree_address_book\n"
+        # removed this for 1.1.2 -- not sure if it needs to be otherwise fixed.
+        # append_file 'app/assets/javascripts/admin/all.js', "//= require admin/spree_address_book\n"
       end
 
       def add_stylesheets
-        inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_address_book\n", :before => /\*\//, :verbose => true
-        inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_address_book\n", :before => /\*\//, :verbose => true
+        # removed these for 1.1.2-- not sure if they need to be otherwise fixed.
+        # inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_address_book\n", :before => /\*\//, :verbose => true
+        # inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_address_book\n", :before => /\*\//, :verbose => true
       end
 
       def add_migrations
